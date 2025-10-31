@@ -1,0 +1,360 @@
+/* * ------------------- GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* * ------------------ CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+}
+
+/* * -------------------------------- Banner Area */
+.banner {
+  background-image: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.6)),
+    url("./images/banner.png");
+  min-height: 100vh;
+  background-position: center; /* Arka plan resminin posizyonunu ortala */
+  background-repeat: no-repeat;
+  background-size: cover; /* Arka plan resminin en ve boy oranini koruyarak (orantili sekilde)  kapla*/
+  position: relative;
+}
+
+/* *  ---------------------------------- Header  */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2% 6%;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+nav {
+  flex: 1; /* !! icinde bulundu Flexbox Kapsayicisi Icersinde Bosta kalan alanin tamamini Kapla*/
+  text-align: right;
+}
+nav .menu-btn {
+  display: none;
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 35px;
+  cursor: pointer;
+}
+nav ul {
+  display: flex;
+  justify-content: end;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+nav ul li a:hover {
+  border-bottom: 2px solid #f44336;
+}
+/* * ------------------------------------- text-box */
+
+.text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Bu 4 deger ile Relative verdigim kapsayicinin tam ortsina hizalar */
+  width: 90%;
+  text-align: center;
+  color: white;
+}
+
+.text-box h1 {
+  font-size: 40px;
+}
+
+.text-box p {
+  margin: 30px;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+  line-height: 1.8;
+  font-weight: lighter;
+  font-size: 18px;
+}
+
+.banner-button {
+  padding: 12px 34px;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.banner-button:hover {
+  background-color: #f44336;
+  border: 1px solid #f44336;
+  transform: scale(1.2);
+}
+
+/* * --------------------------------- Course Area */
+.course {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.course h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.course p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+
+.card-container .course-card {
+  background-color: rgba(210, 85, 210, 0.2);
+  flex-basis: 31%; /* !! icinde bulundu Flexbox Kapsayicisi Icersinde ne kadar alan kaplamsini soyler */
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  border-radius: 12px;
+}
+
+.card-container .course-card:hover {
+  box-shadow: -3px 3px 8px #000;
+}
+
+/* *--------------------------------------- Campus Area */
+.campus,
+.educations,
+.testimonies {
+  width: 80%;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.campus h1,
+.educations h1,
+.testimonies h1 {
+  margin-bottom: 10px;
+}
+
+.card-container {
+  display: flex;
+  margin: 30px auto;
+}
+.card-container .campus-card {
+  flex-basis: 32%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.card-container .campus-card img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+}
+
+.layer:hover {
+  background-color: rgba(256, 0, 0, 0.6);
+}
+
+.layer h3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  color: white;
+}
+
+.layer:hover h3 {
+  opacity: 1;
+  bottom: 50%;
+}
+
+.campus-card:hover img {
+  transform: scale(1.5);
+}
+/* * ---------------------------------------- Educations Area */
+
+.educations {
+  margin-top: 100px;
+}
+
+.education-card {
+  flex-basis: 31%;
+  margin-bottom: 5%;
+  text-align: start;
+}
+
+.education-card img {
+  width: 100%;
+  aspect-ratio: 3/2; /* !! resmin en ve boy oranini belirler. Width / Height  orani s*/
+  border-radius: 15px;
+}
+.education-card h3 {
+  margin: 20px 0 10px 0;
+}
+
+.education-card p {
+  text-align: justify; /* !! metni satır genişliğine eşit şekilde yayar*/
+}
+
+/* * ---------------------------- Testimonies Area */
+.testimonies-card {
+  background-color: rgba(210, 85, 210, 0.2);
+  display: flex;
+  justify-content: center;
+  flex-basis: 48%;
+  border-radius: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.14);
+  text-align: left;
+  cursor: pointer;
+  padding: 20px 10px;
+}
+
+.testimonies-card img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin: 20p;
+}
+
+.testimonies-card h3 {
+  margin-top: 15px;
+}
+.testimonies-card p {
+  font-size: 14px;
+}
+
+.testimonies-card .stars {
+  color: #f44336;
+}
+
+/* * ---------------- CALL  TO ACTION */
+.call-to-action {
+  width: 80%;
+  margin: 100px auto;
+  padding: 100px 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7)),
+    url("./images/banner2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.call-to-action h1 {
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+/* * ----------------------------- FOOTER */
+
+.footer {
+  width: 100vw;
+  margin: 0 auto;
+  padding: 200px 15px;
+  text-align: center;
+}
+.footer h4 {
+  margin: 20px 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.footer-description {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.footer .icons i {
+  color: #f44336;
+  margin: 0 12px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.footer .icons i:hover {
+  transform: scale(1.5);
+}
+
+.footer .copyright {
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+.footer .copyright span {
+  margin-right: 10px;
+}
+
+/* * --------------------------------------- RESPONSIVE DESIGN */
+@media (max-width: 700px) {
+  .card-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  header nav ul {
+    display: none;
+  }
+
+  .banner .text-box h1 {
+    font-size: 25px;
+  }
+
+  .banner .text-box p {
+    font-size: 12px;
+  }
+  nav .menu-btn {
+    display: inline;
+  }
+
+  .layer h3 {
+    font-size: 35px;
+  }
+
+  .call-to-action h1 {
+    font-size: 20px;
+  }
+}
